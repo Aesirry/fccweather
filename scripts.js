@@ -16,21 +16,31 @@ $(document).ready(function(){
       var lat = position.coords.latitude;
       var lon = position.coords.longitude;
       call = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + appID;
-      console.log(call);
-
 
   // gets weather information
-  $.getJSON(call, function(data){
-    city = data.name;
-    weather = data.weather[0].main;
-    temp = data.main.temp;
-    fahr = (temp * (9/5)) - 459.67;
-    cel = temp - 273.15;
-    icon = data.weather[0].icon;
-    iconSource = "http://openweathermap.org/img/w/" + icon + ".png";
-    descr = data.weather[0].description;
+    $.getJSON(call, function(data){
+      city = data.name;
+      weather = data.weather[0].main;
+      temp = data.main.temp;
+      fahr = (temp * (9/5)) - 459.67;
+      cel = temp - 273.15;
+      icon = data.weather[0].icon;
+      descr = data.weather[0].description;
+      country = data.sys.country;
+
+      // change the weather icon
+      iconSource = "http://openweathermap.org/img/w/" + icon + ".png";
+      $("#weather-icon").attr({
+        src: iconSource,
+        alt: descr
+      });
+
+      // change the location
+      $("#location").html(city);
+      $("#country").html(country);
+    });
   });
-});
+
   // Changes the temperature scale
   temp = cel;
   $("#temp-num").html(Math.floor(temp));
