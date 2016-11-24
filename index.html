@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container-of-everything"class="container text-center">
+      <div class="container text-center">
+        <h1>Current Weather in:</h1>
+      </div>
+      <div id="info-box" class="container text-center">
+        <div class="container text-center">
+          <h3><span id="location"></span></h3>
+        </div>
+        <div class="container text-center">
+          <h3><span id="temp"></span></h3>
+        </div>
+        <div class="container text-center">
+          <img id="weather-icon" alt=" " src=" " class="image-responsive">
+        </div>
+        <div class="container text-center">
+          <h3><span id="temp-num"></span> / <span id="temp-scale"></span></h3>
+        </div>
+        <div class="container text-center">
+          <button type="button" class="btn btn-info" id="temp-switch">C&deg; / F&deg;</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
