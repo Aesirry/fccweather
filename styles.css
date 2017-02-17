@@ -1,3 +1,9 @@
 #weather-icon {
   width: 100px;
 }
+
+footer {
+  position: relative;
+  margin-top: 252px;
+  left: 34px;
+}
